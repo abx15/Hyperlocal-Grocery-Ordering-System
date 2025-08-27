@@ -56,7 +56,6 @@ This project is built using **PHP, MySQL, HTML, CSS, JavaScript, and TailwindCSS
    ```bash
    git clone https://github.com/abx15/Hyperlocal-Grocery-Ordering-System.git
 
-```
 
 # 🔑 Default Login Details
 ## 👨‍💻 Admin
