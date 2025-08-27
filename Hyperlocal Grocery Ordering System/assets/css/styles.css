@@ -1,0 +1,91 @@
+/* Custom styles that extend Tailwind */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Dropdown animations */
+.dropdown-menu {
+    transition: all 0.4s ease-out;
+    transform-origin: top;
+    transform: scaleY(0);
+    display: block;
+}
+
+.group:hover .dropdown-menu {
+    transform: scaleY(1);
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.mobile-menu.active {
+    max-height: 1000px; /* Adjust based on your content */
+}
+
+.mobile-dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.mobile-dropdown-menu.active {
+    max-height: 500px;
+}
+
+/* Rotate chevron when dropdown is active */
+.mobile-dropdown-toggle.active i {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown-toggle i {
+    transition: transform 0.3s ease;
+}
+
+/* Cart item count animation */
+.cart-count {
+    transition: transform 0.2s ease-in-out;
+}
+
+.cart-count:hover {
+    transform: scale(1.1);
+}
+
+/* Improved dropdown transitions */
+.dropdown-menu {
+    transition: opacity 0.5s ease, visibility 0.2s ease;
+}
+
+/* Mobile menu improvements */
+.mobile-menu {
+    transition: max-height 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.mobile-menu.active {
+    max-height: 500px;
+}
+
+.mobile-dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-dropdown-menu.active {
+    max-height: 500px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    /* Hide mobile menu on desktop */
+    .mobile-menu {
+        display: none !important;
+    }
+}

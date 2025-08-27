@@ -1,0 +1,79 @@
+/* Custom styles for registration page */
+
+/* Form input focus state */
+.form-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+    border-color: #10b981;
+}
+
+/* Form validation error states */
+.form-input.error {
+    border-color: #ef4444;
+}
+
+.form-input.error:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+/* Password strength meter */
+#password-strength {
+    height: 5px;
+    background-color: #e5e7eb;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+#password-strength::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+#password-strength.weak::after {
+    width: 30%;
+    background-color: #ef4444;
+}
+
+#password-strength.medium::after {
+    width: 60%;
+    background-color: #f59e0b;
+}
+
+#password-strength.strong::after {
+    width: 100%;
+    background-color: #10b981;
+}
+
+/* Toggle password visibility */
+.toggle-password:hover {
+    color: #6b7280;
+}
+
+/* Button loading state */
+#registerButton.loading {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+#registerButton.loading span {
+    display: none;
+}
+
+#registerButton.loading::after {
+    content: '';
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

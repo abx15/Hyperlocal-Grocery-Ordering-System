@@ -1,0 +1,54 @@
+/* Store Page Styles */
+
+/* Tab Navigation */
+.store-tab {
+    transition: all 0.2s ease;
+}
+
+.store-tab:hover {
+    color: #059669; /* green-600 */
+    border-bottom-color: #059669;
+}
+
+/* Product Card */
+.product-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Rating Stars */
+.rating-stars span {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.rating-stars span:hover,
+.rating-stars span.active {
+    color: #f59e0b; /* yellow-400 */
+}
+
+.rating-stars span:hover ~ span {
+    color: #d1d5db; /* gray-300 */
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+    transition: background-color 0.2s ease;
+}
+
+.add-to-cart.added {
+    background-color: #10b981; /* green-500 */
+}
+
+/* Store Sections */
+.store-section {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
